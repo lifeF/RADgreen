@@ -8,35 +8,64 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'RADgreen') }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+	<title>Document</title>
 
-   <!-- Bootstrap -->
-    <link href="{{asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}"  rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="{{asset('vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="{{asset('vendors/nprogress/nprogress.css')}}" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
-    
-    <!-- bootstrap-progressbar -->
-    <link href="{{asset('vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="{{asset('vendors/jqvmap/dist/jqvmap.min.css')}}" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="{{asset('vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
     {!!Charts::assets()!!}
-  
-    <style type="text/css">BODY {overflow: hidden}
-</style>
-
 </head>
-<body >
 
-    <div id="app">
+<body >
+    <!-- nav bara start -->
+<!-- nav bara start -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="{{asset('Assets/icon.png')}}"  width="30" height="30" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                
+                        <ul class="navbar-nav mr-auto">
+                             
+                            @if (Route::has('login'))
+                            
+                                @if (Auth::check())
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link "href="{{ url('/register') }}">Register</a>
+                                    </li>
+                                @endif
+                            @endif
+
+                            <Li class="nav-item">
+                            
+                            </Li>
+
+                        </ul>
+                        <!-- Right Side Of Navbar -->
+                    
+                  
+
+            </div>
+        </nav>
+        <!-- nav bar end  -->
+
+
+
+
+     <!-- <div id="app">
 
         <div class="top_nav">
           <div class="nav_menu">
@@ -55,9 +84,9 @@
                         &nbsp;
                 </ul>
 
-                    <!-- Right Side Of Navbar -->
+                    
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                        
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
@@ -89,58 +118,25 @@
             </nav>
 
           </div>
-        </div>
-        <!-- /top navigation -->
+        </div> -->
+        
        
         @yield('content')
 
-    </div>
-
+    <!-- footer -->
+       <footer style="padding: 10px; position: fixed; bottom: 0px;height: 50px;width: 100%;color:gray; font-family: Aller Light;font-size: 10px" class="footer bg-light text-center ">
+	        © 2018  RAD Green 
+        </footer>
     
-     <!-- jQuery -->
-    <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
-    <!-- Bootstrap -->
-    <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <!-- FastClick -->
-    <script src="{{ asset('vendors/fastclick/lib/fastclick.js') }}"></script>
-    <!-- NProgress -->
-    <script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
-    <!-- Chart.js -->
-    <script src="{{ asset('vendors/Chart.js/dist/Chart.min.js') }}"></script>
-    <!-- gauge.js -->
-    <script src="{{ asset('vendors/gauge.js/dist/gauge.min.js') }}"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="{{ asset('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
-    <!-- iCheck -->
-    <script src="{{ asset('vendors/iCheck/icheck.min.js') }}"></script>
-    <!-- Skycons -->
-    <script src="{{ asset('vendors/skycons/skycons.js') }}"></script>
-    <!-- Flot -->
-    <script src="{{ asset('vendors/Flot/jquery.flot.js') }}"></script>
-    <script src="{{ asset('vendors/Flot/jquery.flot.pie.js') }}"></script>
-    <script src="{{ asset('vendors/Flot/jquery.flot.time.js') }}"></script>
-    <script src="{{ asset('vendors/Flot/jquery.flot.stack.js') }}"></script>
-    <script src="{{ asset('vendors/Flot/jquery.flot.resize.js') }}"></script>
-    <!-- Flot plugins -->
-    <script src="{{ asset('vendors/flot.orderbars/js/jquery.flot.orderBars.js') }}"></script>
-    <script src="{{ asset('vendors/flot-spline/js/jquery.flot.spline.min.js') }}"></script>
-    <script src="{{ asset('vendors/flot.curvedlines/curvedLines.js') }}"></script>
-    <!-- DateJS -->
-    <script src="{{ asset('vendors/DateJS/build/date.js') }}"></script>
-    <!-- JQVMap -->
-    <script src="{{ asset('vendors/jqvmap/dist/jquery.vmap.js') }}"></script>
-    <script src="{{ asset('vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
-    <script src="{{ asset('vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="{{ asset('vendors/moment/min/moment.min.js') }}"></script>
-    <script src="{{ asset('vendors/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
-
-    <script src="{{asset('vendors/raphael/raphael.min.js')}}"></script>
-    <script src="{{asset('vendors/morris.js/morris.min.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <!-- end footer -->
 
 
-    <!-- Custom Theme Scripts -->
-    <script src="{{ asset('build/js/custom.min.js') }}"></script>
    
 </body>
 </html>
