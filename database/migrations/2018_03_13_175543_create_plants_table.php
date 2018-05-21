@@ -17,8 +17,11 @@ class CreatePlantsTable extends Migration
             $table->increments('id');
             $table->integer('section_id');
             $table->string('name');
-            $table->integer('water_level');
-            $table->integer('fertilizer_level');
+            $table->string('type');
+            $table->string('security_key');
+            $table->string('water_level');
+            $table->string('fertilizer_level');
+            $table->string('temperature_level');
             $table->timestamps();
         });
     }

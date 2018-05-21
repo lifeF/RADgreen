@@ -28,6 +28,7 @@
 
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+    {!!Charts::assets()!!}
   
     <style type="text/css">BODY {overflow: hidden}
 </style>
@@ -133,6 +134,10 @@
     <!-- bootstrap-daterangepicker -->
     <script src="{{ asset('vendors/moment/min/moment.min.js') }}"></script>
     <script src="{{ asset('vendors/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+
+    <script src="{{asset('vendors/raphael/raphael.min.js')}}"></script>
+    <script src="{{asset('vendors/morris.js/morris.min.js')}}"></script>
+
 
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('build/js/custom.min.js') }}"></script>

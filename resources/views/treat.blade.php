@@ -1,5 +1,25 @@
 @extends('layouts.app')
 
+<style>
+.label {
+    color:  #2196F3;
+
+    padding: 4px;
+    font-family: Arial;
+}
+.success {background-color: #4CAF50;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */ 
+.other {background-color: #e7e7e7; color: black;} /* Gray */ 
+
+/*.contN {
+      height: 200px;
+      width: 160px;
+}
+*/
+</style>
+
 @section('content')
 @if(Session::has('message'))
 <h5 class="alert {{ Session::get('alert-class', 'alert-info') }}"><center>{{ Session::get('message') }}</center></h5>
@@ -20,25 +40,21 @@
                                     <div class="col-md-4 col-sm-6 col-xs-12">
                                       <div class="x_panel">
                                         <div class="x_title">
-                                          <h2>Plant <small>{{$plant->id}}</small></h2>
-                                          <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li>
-                                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                              
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                          </ul>
+                                          <center><h1><span class="label success">Plant: {{$plant->name}}</span><span class="label ino">{{$plant->id}}</span></h1></center>
+           
                                           <div class="clearfix"></div>
                                         </div>
                                         <div class="x_content">
-                                          
+                                        
+
                                                        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2WBZcOMmq2g9Isf3fQcJwmRwtSwd4P-33Trn2RshkyDdCYpND width="180px" class="img-fluid" alt="">
-                                                    <h1 class="card-title">{{$plant->name}}</h1>
-                                                    <h2 class="card-text">{{$plant->section_id}}</h2>
-                                                    <a href='#' class="btn btn-primary btn-md">Add</a>
+                                                      
+
+                                                           
+                                                     
+                                                   
+                                              
+                                                    <a href='{{$section->id}}/plant/{{$plant->id}}' class="btn btn-primary btn-md">Treat</a>
                                                  
 
                                         </div>
@@ -64,4 +80,7 @@
 </div>
 
 @endsection
+
+
+
 

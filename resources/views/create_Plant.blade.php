@@ -14,15 +14,14 @@
     </div>
 
      <div class="form-group">
-      <label for="inputWaterLevel">Water Level</label>
-      <input class="form-control" id="water_level" name="water_level" placeholder="Enter Water Level" type="text">
+      <label for="inputWaterLevel">Plant Type</label>
+      <input class="form-control" id="type" name="type" placeholder="Enter Plant Type" type="text">
     </div>
 
-    <div class="form-group">
-      <label for="getFertilizerLevel">Fertilizer Level</label>
-      <input class="form-control" id="fertilizer_level" name="fertilizer_level" placeholder="Enter Fertilizer Level" type="text">
+     <div class="form-group">
+      <label for="inputWaterLevel">Security Code</label>
+      <input class="form-control" id="sec_key" name="sec_key" placeholder="Enter Security Code" type="text">
     </div>
-
 
     <button type="submit" class="btn btn-success">Create New Plant</button>
   </fieldset>
