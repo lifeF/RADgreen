@@ -11,7 +11,12 @@
         crossorigin="anonymous">
         <title>Welcome to Your Green Life</title>
     </head>
-    <body>
+    <body style="background: url('{{asset('Assets/back.png')}}') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;">
+
         <!-- nav bara start -->
         <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
             <a class="navbar-brand" href="#">
@@ -42,6 +47,24 @@
         </nav>
         <!-- nav bar end  -->
 
+        <!-- welcome message -->
+        <div style="padding-top:10% ;height: 20% ;border-radius: 10px " class="container-fluid">
+            <div style="padding: 6%;opacity: 0.7"  class=" bg-light">
+                <center> <img src="Assets/icon.png" width="10%"  alt=""></center>
+                <p style="color:green;font-size: 60px;font-family: Aller Light;margin-bottom: 0px;padding-bottom: 0px"> Welcome to your GreenWorld</p>
+                <p style="color:gray; font-family: Aller Light"><i>“Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth,<br> good morals, and happiness.”</i> </p>
+                <center>
+                <div class="btn-group" style="color:gray; font-family: Aller Light" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">About</button>
+                    <button type="button" class="btn btn-success">VISIT</button>
+                    <button type="button" class="btn btn-secondary">Help</button>
+                </div>
+                </center>
+            </div>	
+        </div>
+        <!-- end welcome message -->
+
+        
 
 
 
