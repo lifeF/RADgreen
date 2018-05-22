@@ -6,7 +6,15 @@
 <!-- new  -->
 <div class="container">
         <div class="col-xs-12" style="height:20px;"></div>
-        <a href='{{$section->id}}/create_Plant' class="btn btn-success btn-md">Add New Plant</a>
+        <div class="row">
+            <div class= "col-lg-6 text-left">
+                <a href='{{$section->id}}/create_Plant' class="btn btn-success btn-md">Add New Plant</a>
+            </div>
+            <div class= "col-lg-6 text-right">
+                 <a href="/home/" class="btn btn-primary btn-md">Back</a>
+            </div>
+        </div>
+        
         <div class="col-xs-12" style="height:20px;"></div>
         <div class="row">
           @foreach( $plants as $plant)
@@ -69,7 +77,6 @@
                             </div>
                             <div class="col-lg-3 text-right">
                                 <a href='{{$section->id}}/plant/{{$plant->id}}' class="btn btn-success">Treat</a>
-                                
                             </div>
 
                         </div>

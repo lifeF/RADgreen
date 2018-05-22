@@ -25,7 +25,7 @@
             
             <address>
             <i class="fas fa-map-marker"></i>
-            <strong>Twitter, Inc.</strong>
+            <strong>Green House, Inc.</strong>
               <br> 1355 Market Street, Suite 900
               <br> San Francisco, CA 94103
               <br>

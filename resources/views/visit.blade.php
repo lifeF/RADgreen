@@ -17,10 +17,8 @@
       <div class="col-lg-4 text-center">
            
       </div>
-      <div class="col-lg-4 text-right">
-         
-                 <a href="/home" class="btn btn-primary btn-md">Back</a>
-         
+      <div class="col-lg-4 text-right"> 
+         <a href="/home" class="btn btn-primary btn-md">Back</a>
       </div>
     </div>
    
