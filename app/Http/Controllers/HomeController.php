@@ -136,7 +136,7 @@ class HomeController extends Controller
           $greenhouses = user::find(Auth::user()->id)->greenhouse;
           $greenhouse = $greenhouses->find($id1);
           $section = $greenhouse->section->find($id2);
-          $plants = $section->plant()->paginate(3);
+          $plants = $section->plant()->paginate(4);
 
 
          return view('treat',compact('section','plants','id1'));
@@ -156,6 +156,7 @@ class HomeController extends Controller
                 ->elementlabel('Water Level')
                 ->values(unserialize($plant->water_level))
                 ->dimensions(21,21)
+                ->width(10)
                 ->responsive(true);
   
            $chart2 = Charts::create('line','highcharts')
