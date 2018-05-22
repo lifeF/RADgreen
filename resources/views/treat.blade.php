@@ -9,18 +9,18 @@
         <a href='{{$section->id}}/create_Plant' class="btn btn-success btn-md">Add New Plant</a>
         <div class="col-xs-12" style="height:20px;"></div>
         <div class="row">
-        @foreach( $plants as $plant)
+          @foreach( $plants as $plant)
             <!-- plant card -->
 
             <div class="col-lg-6">
-                <div class="card" style="width: 100%;">
+                <div class="card" style="width: 100%; margin-bottom:20px">
                     <div class="card-header">
                         <div class="row" style="margin-bottom:0;margin-top:3px;font-family: Aller Light;font-size: 15px">
                             <div class="col-lg-6">
-                                ID of Plant
+                                ID : {{$plant->id}}
                             </div>
                             <div class="col-lg-6 text-right">
-                                01
+                                SID : {{$section->id}}
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                 </div>
             </div>
             <!-- plant card end  -->
-
+            @endforeach
         </div>
 
         <!-- Modal -->
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div>
-     @endforeach
+     
   </div>
 </div>
 <!-- end new  -->
