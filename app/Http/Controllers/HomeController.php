@@ -156,6 +156,7 @@ class HomeController extends Controller
                 ->elementlabel('Water Level')
                 ->values(unserialize($plant->water_level))
                 ->dimensions(21,21)
+                ->width(10)
                 ->responsive(true);
   
            $chart2 = Charts::create('line','highcharts')
