@@ -68,7 +68,8 @@
                                 </p>
                             </div>
                             <div class="col-lg-3 text-right">
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">More</button>
+                                <a href='{{$section->id}}/plant/{{$plant->id}}' class="btn btn-success">Treat</a>
+                                
                             </div>
 
                         </div>
@@ -80,76 +81,11 @@
             @endforeach
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        
-                    </div>
-                    <div class="modal-body">
-                       <div class="row">
-                            <!-- plant card -->
-                            <div class="col-lg-12">
-                                <div class="card" style="width: 100%;">
-                                    
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <img src="{{asset('Assets/Plant.png')}}" width="105%" height="auto" alt="">
-                                            </div>
-
-                                            <div class="col-sm-3">
-                                                <div class="card" style="width: 100%;height: 100%;">
-                                                    <p class="text-center" style="margin-bottom:0;margin-top:3px;font-family: Aller Light;font-size: 8px">Water level</p>
-                                                    <hr style="margin:2px">
-                                                    <div style="height: 100%">
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="card" style="width: 100%;height: 100%;">
-                                                    <p class="text-center" style="margin-bottom:0;margin-top:3px;font-family: Aller Light;font-size: 8px">Feritilizer level</p>
-                                                    <hr style="margin:2px">
-                                                    <div style="height: 100%">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="card" style="width: 100%;height: 100%;">
-                                                    <p class="text-center" style="margin-bottom:0;margin-top:3px;font-family: Aller Light;font-size: 8px">Temp level</p>
-                                                    <hr style="margin:2px">
-                                                    <div style="height: 100%">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-                                        
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- plant card end  -->
-                       </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
      
   </div>
 </div>
 <!-- end new  -->
-
-
 
 <!-- @if(Session::has('message'))
 <h5 class="alert {{ Session::get('alert-class', 'alert-info') }}"><center>{{ Session::get('message') }}</center></h5>
