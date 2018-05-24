@@ -242,6 +242,7 @@ class HomeController extends Controller
             $plant->temperature_level = serialize($unserialized_array3);
             $plant->save();
 
+            return "ok";
       
     }
 }
